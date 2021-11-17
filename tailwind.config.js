@@ -2,7 +2,11 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontSize:{
+        '12':'12rem'
+      }
+    },
   },
   variants: {
     extend: {
