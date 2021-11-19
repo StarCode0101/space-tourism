@@ -1,32 +1,45 @@
 <template>
-  <div>
+  <div
+    class="h-full w-full z-10 bg-cover bg-center bg-no-repeat"
+    :style="{
+      backgroundImage: 'url(' + require(`~/assets/img/destination/${bgImage}.jpg`) + ')',
+    }"
+  >
     <div
-      class="h-full w-full z-10 bg-cover bg-center"
-      :style="{ backgroundImage: 'url(' + require(`~/assets/img/${bgImage}`) + ')' }"
+      class="max-w-screen-2xl mx-auto md:px-32 px-7 py-6 w-full pt-28 md:pt-52 flex flex-wrap"
     >
-      <div class="h-52 w-54 text-white pt-20"></div>
-
-      <div class="container mx-0 px-7 py-6 flex w-full pb-56">
-        <div class="w-1/12"></div>
-        <div class="w-11/12 flex flex-nowrap items-center">
-          <div class="flex flex-wrap w-full">
-            <div class="w-1/2 text-white">
-              <p class="text-xl pb-2">So, you want to travel to</p>
-              <p class="text-9xl uppercase pb-8">Space</p>
-              <p class="text-lg">
-                Let’s face it; if you want to go to space, you might as well genuinely go
-                to outer space and not hover kind of on the edge of it. Well sit back, and
-                relax because we’ll give you a truly out of this world experience!
-              </p>
-            </div>
-            <div class="w-1/2 pl-96 pt-20">
-              <div
-                class="flex items-center justify-center w-56 h-56 rounded-full bg-white uppercase"
-              >
-                Explore
-              </div>
-            </div>
-          </div>
+      <div class="flex flex-wrap w-full">
+        <div class="lg:w-1/2 text-white text-center">
+          <p class="text-xl pb-2 uppercase lg:text-left">Pick your destination</p>
+          <img
+            class="h-45 w-45"
+            :src="require(`~/assets/img/destination/${currenTabImage}.webp`)"
+            alt=""
+          />
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <nav class="flex flex-row text-white bg-transparent justify-start">
+            <a
+              class="flex items-center font-semibold py-2 mt-2 text-sm bg-transparent min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white md:active:border-white"
+            >
+              MOON
+            </a>
+            <a
+              class="flex items-center font-semibold py-2 mt-2 text-sm bg-transparent min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white"
+            >
+              MOON
+            </a>
+            <a
+              class="flex items-center font-semibold py-2 mt-2 text-sm bg-transparent min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white md:active:border-white"
+            >
+              MOON
+            </a>
+            <a
+              class="flex items-center font-semibold py-2 mt-2 text-sm bg-transparent min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white md:active:border-white"
+            >
+              MOON
+            </a>
+          </nav>
         </div>
       </div>
     </div>
@@ -37,11 +50,29 @@
 export default {
   data() {
     return {
-      data: "frkfjrkj",
-      bgImage: "background-home-desktop.jpg",
+      tabActive: ["border-b-2", "border-white"],
+      currenTabImage: "image-moon",
+      images: {
+        moon: "image-moon",
+        europa: "image-eroupa",
+      },
     };
+  },
+
+  computed: {
+    bgImage() {
+      if (this.$store.state.deviceType === "mobile")
+        return "background-destination-mobile";
+      else if (this.$store.state.deviceType === "tablet")
+        return "background-destination-tablet";
+      else return "background-destination-desktop";
+    },
   },
 };
 </script>
 
-<style></style>
+<style scoped>
+.tab-active {
+  @apply border-b-2 border-white;
+}
+</style>

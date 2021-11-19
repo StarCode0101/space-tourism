@@ -10,8 +10,10 @@ module.exports = {
   },
   variants: {
     extend: {
-      borderStyle:['responsive','hover'],
-      borderWidth:['responsive','hover'],
+      borderStyle:['responsive','hover','active'],
+      borderWidth:['responsive','hover','active'],
+     
+     
     },
   },
   plugins: [

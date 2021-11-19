@@ -35,7 +35,7 @@
           <hr class="hidden lg:flex border-t-2 border-gray-600 w-12 -mr-8 z-50" />
           <nav
             :class="{ hidden: isHidden }"
-            class="flex-col md:px-12 md:flex md:flex-row mt-2 md:mt-0 text-black md:text-white bg-white md:bg-transparent md:bg-gray-800 md:bg-opacity-95 lg:justify-end xl:pr-96 lg:pr-32 lg:bg-transparent lg:backdrop-filter lg:backdrop-blur-xl lg:backdrop-brightness-125"
+            class="flex-col md:px-12 md:flex md:flex-row mt-2 md:mt-0 text-black md:text-white bg-white md:bg-transparent md:bg-gray-800 md:bg-opacity-95 lg:justify-end xl:pr-96 lg:bg-transparent lg:backdrop-filter lg:backdrop-blur-xl lg:backdrop-brightness-125"
           >
             <nuxt-link
               class="flex items-center font-semibold py-2 md:py-9 mt-2 text-sm bg-transparent md:min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white md:active:border-white"
@@ -85,14 +85,9 @@ export default {
   methods: {
     toggleMenu() {},
   },
-  watch: {
-    screenType() {
-      this.OnWindowResize();
-    },
-  },
+
   methods: {
     OnWindowResize() {
-      console.log(window.screen.width);
       if (window.screen.width < 760) {
         this.$store.commit("changeDeviceType", "mobile");
       } else if (screen.width > 760 && screen.width < 1024) {
