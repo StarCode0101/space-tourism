@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import iData from "~/content/data.json";
 export default {
   data() {
     return {
