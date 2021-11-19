@@ -4,7 +4,7 @@
     :style="{ backgroundImage: 'url(' + require(`~/assets/img/${bgImage}`) + ')' }"
   >
     <div
-      class="max-w-screen-2xl mx-auto md:px-32 px-7 py-6 w-full pt-28 md:pt-52 flex flex-wrap"
+      class="max-w-screen-2xl mx-auto md:px-32 px-7 py-24 w-full pt-28 md:pt-80 flex flex-wrap"
     >
       <div class="flex flex-wrap lg:flex-nowrap items-center">
         <div class="flex flex-wrap w-full">

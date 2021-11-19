@@ -35,33 +35,30 @@
           <hr class="hidden lg:flex border-t-2 border-gray-600 w-12 -mr-8 z-50" />
           <nav
             :class="{ hidden: isHidden }"
-            class="flex-col md:px-12 md:flex md:flex-row mt-2 md:mt-0 text-black md:text-white bg-white md:bg-transparent md:bg-gray-800 md:bg-opacity-95 lg:justify-end xl:pr-48 lg:bg-transparent lg:backdrop-filter lg:backdrop-blur-xl lg:backdrop-brightness-125"
+            class="flex-col md:px-24 md:flex md:flex-row mt-2 md:mt-0 text-black md:text-white bg-white md:bg-transparent md:bg-gray-800 md:bg-opacity-95 lg:justify-end xl:pr-48 lg:bg-transparent lg:backdrop-filter lg:backdrop-blur-xl lg:backdrop-brightness-125"
           >
             <nuxt-link
               class="flex items-center font-semibold py-2 md:py-9 mt-2 text-sm bg-transparent md:min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white md:active:border-white"
               to="/"
-              >00 HOME</nuxt-link
+              ><span class="font-bold pr-2">00</span>HOME</nuxt-link
             >
             <nuxt-link
-              class="flex items-center font-semibold py-2 md:py-9 mt-2 text-sm bg-transparent md:min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white md:active:border-white"
+              class="cursor-pointer flex items-center font-semibold py-2 md:py-9 mt-2 text-sm bg-transparent md:min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white "
               to="/destination"
-              >01 DESTINATIONS</nuxt-link
+              ><span class="font-bold pr-2">01</span>DESTINATIONS</nuxt-link
             >
             <nuxt-link
-              class="flex items-center font-semibold py-2 md:py-9 mt-2 text-sm bg-transparent md:min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white"
-              to="/"
-              >02 CREW</nuxt-link
+              class="cursor-pointer  flex items-center font-semibold py-2 md:py-9 mt-2 text-sm bg-transparent md:min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white"
+              to="/crew"
+              ><span class="font-bold pr-2">02</span>CREW</nuxt-link
             >
+           
             <nuxt-link
-              class="flex items-center font-semibold py-2 md:py-9 mt-2 text-sm bg-transparent md:min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white"
-              to="/"
-              >03 HOME</nuxt-link
+              class="cursor-pointer  flex items-center font-semibold py-2 md:py-9 mt-2 text-sm bg-transparent md:min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white"
+              to="/technology"
+              ><span class="font-bold pr-2">03</span>TECHNOLOGY</nuxt-link
             >
-            <nuxt-link
-              class="flex items-center font-semibold py-2 md:py-9 mt-2 text-sm bg-transparent md:min-h-16 px-4 md:px-0 md:mx-4 md:hover:border-b-2 md:hover:border-white"
-              to="/"
-              >HOME</nuxt-link
-            >
+           
           </nav>
         </div>
       </div>
@@ -110,4 +107,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="postcss" >
+a.nuxt-link-exact-active {
+  @apply md:border-white md:border-b-2;
+}
+</style>
+
+</style>
