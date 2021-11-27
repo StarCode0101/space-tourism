@@ -33,7 +33,9 @@
           </nav>
           <div class="text-white">
             <p class="text-8xl uppercase py-10 text-left">{{ name }}</p>
-            <p class="text-xl text-gray-300 leading-8 pb-16">{{ description }}</p>
+            <p class="text-lg xl:text-xl text-gray-300 leading-8 pb-16">
+              {{ description }}
+            </p>
 
             <hr class="pb-3" />
             <div class="flex">

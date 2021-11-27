@@ -15,7 +15,7 @@
           </p>
           <p class="text-xl uppercase pb-3 text-left text-gray-400">{{ role }}</p>
           <p class="text-4xl xl:text-5xl pb-10 text-left uppercase">{{ name }}</p>
-          <p class="text-md text-gray-300 lg:text-lg pb-8 text-left leading-9">
+          <p class="text-md text-gray-300 text-lg xl:text-xl pb-8 text-left leading-8">
             {{ bio }}
           </p>
 

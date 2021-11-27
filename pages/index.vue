@@ -13,7 +13,7 @@
             <p class="text-6xl md:text-9xl xl:text-12 uppercase pb-8 lg:text-left">
               Space
             </p>
-            <p class="text-lg lg:text-left">
+            <p class="text-lg xl:text-xl lg:text-left leading-8">
               Let’s face it; if you want to go to space, you might as well genuinely go to
               outer space and not hover kind of on the edge of it. Well sit back, and
               relax because we’ll give you a truly out of this world experience!
