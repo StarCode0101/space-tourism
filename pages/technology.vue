@@ -10,7 +10,7 @@
     >
       <div class="flex flex-wrap w-full">
         <div class="lg:w-1/2 text-white text-center">
-          <p class="text-xl uppercase lg:text-left pb-16">
+          <p class="text-xl uppercase lg:text-left pb-32">
             <span class="font-thin text-gray-300 pr-2">03 </span> SPACE LAUNCH 101
           </p>
           <div class="flex flex-row">
@@ -28,13 +28,13 @@
             <div>
               <p class="text-left pb-3 px-6">THE TERMINOLOGY</p>
               <p class="text-left pb-5 px-6 text-3xl uppercase">{{ name }}</p>
-              <p class="text-left px-6 leading-6">{{ description }}</p>
+              <p class="text-left px-6 text:lg xl:text-xl leading-8">{{ description }}</p>
             </div>
           </div>
         </div>
-        <div class="lg:w-1/2 w-full">
+        <div class="lg:w-1/2 w-full flex items-center">
           <img
-            class="h-45 w-45 p-4"
+            class="h-auto w-full p-4"
             :src="require(`~/assets/img/technology/${currentTab}`)"
             alt=""
           />
@@ -50,6 +50,7 @@ export default {
   data() {
     return {
       //tabActive: ["border-b-2", "border-white"],
+      orientation: true, //true for portrait false for  landscape
       currentTab: "image-launch-vehicle-portrait.jpg",
       technology: data.technology,
       description: "", // data.destinations[0].description,
@@ -64,17 +65,35 @@ export default {
         return "background-technology-tablet";
       else return "background-technology-desktop";
     },
+
+    /* orientation() {
+      return this.OnWindowResize();
+    }, */
   },
+
+  watch: {},
   methods: {
     handleSelect(index) {
       this.technology.forEach((tech, i) => {
         tech.active = index == i; //true(active)
         if (index == i) {
-          this.currentTab = tech.images.portrait;
+          this.currentTab = this.orientation
+            ? tech.images.landscape
+            : tech.images.portrait;
           this.name = tech.name;
           this.description = tech.description;
         }
       });
+    },
+
+    OnWindowResize() {
+      if (window.innerHeight < window.innerWidth) {
+        this.orientation = false;
+        this.currentTab = this.currentTab.replace("landscape", "portrait");
+      } else {
+        this.orientation = true;
+        this.currentTab = this.currentTab.replace("portrait", "landscape");
+      }
     },
   },
 
@@ -82,8 +101,15 @@ export default {
     //to initially select the first active tab
 
     this.$nextTick(function () {
+      this.OnWindowResize();
       this.handleSelect(0);
     });
+
+    window.addEventListener("resize", this.OnWindowResize);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener("resize", this.OnWindowResize);
   },
 };
 </script>

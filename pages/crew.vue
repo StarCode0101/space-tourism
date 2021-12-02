@@ -6,20 +6,22 @@
     }"
   >
     <div
-      class="max-w-screen-2xl mx-auto md:px-32 px-7 py-6 w-full pt-28 md:pt-52 flex flex-wrap"
+      class="max-w-screen-2xl mx-auto md:px-32 px-7 w-full pt-28 md:pt-52 flex flex-wrap"
     >
-      <div class="flex flex-wrap w-full">
+      <div class="flex flex-wrap items-end w-full">
         <div class="lg:w-1/2 w-full text-white">
           <p class="text-xl pb-32 uppercase lg:text-left">
             <span class="text-gray-400">01</span> MEET YOUR CREW
           </p>
           <p class="text-xl uppercase pb-3 text-left text-gray-400">{{ role }}</p>
           <p class="text-4xl xl:text-5xl pb-10 text-left uppercase">{{ name }}</p>
-          <p class="text-md text-gray-300 text-lg xl:text-xl pb-8 text-left leading-8">
+          <p class="text-md text-gray-300 text-lg xl:text-xl pb-32 text-left leading-8">
             {{ bio }}
           </p>
 
-          <nav class="flex flex-row space-x-5 text-white bg-transparent justify-start">
+          <nav
+            class="flex flex-row space-x-5 text-white bg-transparent justify-start pb-20"
+          >
             <template v-for="(mCrew, index) in crew">
               <a
                 class="h-4 w-4 bg-gray-500 rounded-full md:hover:bg-white cursor-pointer"
