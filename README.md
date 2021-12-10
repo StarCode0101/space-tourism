@@ -70,6 +70,6 @@ To dynamically generate events from array, not having to write different methods
     },
 
 ```
-
+### Author
 - Frontend Mentor - [@StarCode0101](https://www.frontendmentor.io/profile/StarCode0101)
 - Twitter - [@i_am_starcode](https://www.twitter.com/i_am_starcode)
