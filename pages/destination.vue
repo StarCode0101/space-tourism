@@ -16,7 +16,7 @@
           <img
             class="h-45 w-45 p-16"
             :src="require(`~/assets/img/destinations/${currentTab}`)"
-            alt=""
+            alt="destination image"
           />
         </div>
         <div class="lg:w-1/2 w-full">

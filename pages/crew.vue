@@ -37,7 +37,7 @@
             style="max-height: 480px; max-width: 480px"
             class="h-45 w-45 pt-6 pb-0 bg-center bg-cover"
             :src="require(`~/assets/img/crew/${currentTab}`)"
-            alt=""
+            alt="crew member image"
           />
         </div>
       </div>

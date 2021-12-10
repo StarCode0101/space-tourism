@@ -36,7 +36,7 @@
           <img
             class="h-auto w-full p-4"
             :src="require(`~/assets/img/technology/${currentTab}`)"
-            alt=""
+            alt="technology image"
           />
         </div>
       </div>
